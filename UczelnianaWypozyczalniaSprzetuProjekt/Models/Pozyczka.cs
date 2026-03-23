@@ -1,6 +1,6 @@
 ﻿namespace UczelnianaWypozyczalniaSprzetuProjekt.Models;
 
-public class Loan
+public class Pozyczka
 {
     private static int _nextId = 1;
 
@@ -16,7 +16,7 @@ public class Loan
     public bool IsActive => !IsReturned;
     public bool IsOverdue => !IsReturned && DateTime.Now.Date > DueDate.Date;
 
-    public Loan(Uzytkownik user, Przedmioty equipment, DateTime borrowDate, DateTime dueDate)
+    public Pozyczka(Uzytkownik user, Przedmioty equipment, DateTime borrowDate, DateTime dueDate)
     {
         if (dueDate < borrowDate)
             throw new ArgumentException("Due date cannot be earlier than borrow date.");

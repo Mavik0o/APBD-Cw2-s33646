@@ -7,9 +7,9 @@ namespace UczelnianaWypozyczalniaSprzetuProjekt.Services.Loans;
 
 public class LoanService
 {
-    private readonly List<Loan> _loans = [];
+    private readonly List<Pozyczka> _loans = [];
 
-    public Loan BorrowEquipment(Uzytkownik user, Przedmioty equipment, DateTime borrowDate, int days)
+    public Pozyczka BorrowEquipment(Uzytkownik user, Przedmioty equipment, DateTime borrowDate, int days)
     {
         if (equipment.Status != StatusPrzedmiotow.Available)
             throw new EquipmentUnavailableException(equipment.Id);
@@ -21,7 +21,7 @@ public class LoanService
             throw new LoanLimitExceededException(user.Id);
 
         var dueDate = borrowDate.AddDays(days);
-        var loan = new Loan(user, equipment, borrowDate, dueDate);
+        var loan = new Pozyczka(user, equipment, borrowDate, dueDate);
 
         _loans.Add(loan);
         equipment.Status = StatusPrzedmiotow.Borrowed;
@@ -42,17 +42,17 @@ public class LoanService
         loan.Equipment.Status = StatusPrzedmiotow.Available;
     }
 
-    public List<Loan> GetAllLoans()
+    public List<Pozyczka> GetAllLoans()
     {
         return _loans;
     }
 
-    public List<Loan> GetActiveLoansForUser(int userId)
+    public List<Pozyczka> GetActiveLoansForUser(int userId)
     {
         return _loans.Where(l => l.User.Id == userId && l.IsActive).ToList();
     }
 
-    public List<Loan> GetOverdueLoans()
+    public List<Pozyczka> GetOverdueLoans()
     {
         return _loans.Where(l => l.IsOverdue).ToList();
     }

@@ -5,7 +5,7 @@ namespace UczelnianaWypozyczalniaSprzetuProjekt.Services.Reports;
 
 public class ReportsService
 {
-    public void PrintSummary(List<Przedmioty> equipment, List<Loan> loans)
+    public void PrintSummary(List<Przedmioty> equipment, List<Pozyczka> loans)
     {
         Console.WriteLine("\n===== RAPORT WYPOŻYCZALNI =====");
 
