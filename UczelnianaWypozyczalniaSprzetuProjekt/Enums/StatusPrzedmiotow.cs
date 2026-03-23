@@ -1,6 +1,8 @@
 ﻿namespace UczelnianaWypozyczalniaSprzetuProjekt.Enums;
 
-public class StatusPrzedmiotow
+public enum StatusPrzedmiotow
 {
-    
+    Available,
+    Borrowed,
+    Unavailable
 }
