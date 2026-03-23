@@ -2,4 +2,4 @@
 
 
 public class LoanNotFoundException(int loanId)
-    : Exception($"Loan with id {loanId} was not found.");
+    : Exception($"Wypozyczenie o id {loanId} nie zostalo znalezione.");

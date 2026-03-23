@@ -20,6 +20,6 @@ public abstract class Uzytkownik
 
     public override string ToString()
     {
-        return $"ID: {Id}, {FirstName} {LastName}, Type: {GetUserType()}, Limit: {GetLoanLimit()}";
+        return $"ID: {Id}, {FirstName} {LastName}, Typ: {GetUserType()}, Limit: {GetLoanLimit()}";
     }
 }

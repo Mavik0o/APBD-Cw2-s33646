@@ -19,7 +19,7 @@ public class Pozyczka
     public Pozyczka(Uzytkownik user, Przedmioty equipment, DateTime borrowDate, DateTime dueDate)
     {
         if (dueDate < borrowDate)
-            throw new ArgumentException("Due date cannot be earlier than borrow date.");
+            throw new ArgumentException("Data do nie moze byc wczesniejsza niz data od");
 
         Id = _nextId++;
         User = user;
@@ -32,7 +32,7 @@ public class Pozyczka
     public void Return(DateTime returnDate, decimal penalty)
     {
         if (IsReturned)
-            throw new InvalidOperationException("Loan has already been returned.");
+            throw new InvalidOperationException("Juz zwrocono wypozyczenie.");
 
         ReturnDate = returnDate;
         Penalty = penalty;
@@ -41,9 +41,9 @@ public class Pozyczka
     public override string ToString()
     {
         var returnInfo = IsReturned
-            ? $"Returned: {ReturnDate:yyyy-MM-dd}, Penalty: {Penalty} PLN"
-            : "Not returned yet";
+            ? $"Zwrocono: {ReturnDate:yyyy-MM-dd}, Kara: {Penalty} PLN"
+            : "nie zwrocono jeszcze";
 
-        return $"Loan ID: {Id}, User: {User.FirstName} {User.LastName}, Equipment: {Equipment.Name}, Borrowed: {BorrowDate:yyyy-MM-dd}, Due: {DueDate:yyyy-MM-dd}, {returnInfo}";
+        return $"Wypozyczenie ID: {Id}, Uzytkownik: {User.FirstName} {User.LastName}, Przedmiot: {Equipment.Name}, Pozyczono: {BorrowDate:yyyy-MM-dd}, Do: {DueDate:yyyy-MM-dd}, {returnInfo}";
     }
 }

@@ -1,4 +1,4 @@
 ﻿namespace UczelnianaWypozyczalniaSprzetuProjekt.Exceptions;
 
 public class UserNotFoundException(int userId)
-    : Exception($"User with id {userId} was not found.");
+    : Exception($"Uzytkownik o id {userId} zostal nie znaleziony.");

@@ -7,7 +7,7 @@ public class ReportsService
 {
     public void PrintSummary(List<Przedmioty> equipment, List<Pozyczka> loans)
     {
-        Console.WriteLine("\n===== RAPORT WYPOŻYCZALNI =====");
+        Console.WriteLine("\nRaport z wypozyczalni co i jak");
 
         Console.WriteLine($"Liczba sprzętów: {equipment.Count}");
         Console.WriteLine($"Dostępne: {equipment.Count(e => e.Status == StatusPrzedmiotow.Available)}");

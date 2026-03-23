@@ -2,4 +2,4 @@
 
 
 public class EquipmentAlreadyReturnedException(int loanId)
-    : Exception($"Loan with id {loanId} has already been returned.");
+    : Exception($"Wypozyczenie z id {loanId} zostalo juz zwrocone.");

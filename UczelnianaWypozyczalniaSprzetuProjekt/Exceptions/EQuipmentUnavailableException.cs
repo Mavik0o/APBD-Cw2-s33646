@@ -1,4 +1,4 @@
 ﻿namespace UczelnianaWypozyczalniaSprzetuProjekt.Exceptions;
 
 public class EquipmentUnavailableException(int equipmentId)
-    : Exception($"Equipment with id {equipmentId} is not available for borrowing.");
+    : Exception($"Przedmiot z id {equipmentId} jest aktualnie niedostepny do wypozyczenia.");

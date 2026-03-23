@@ -7,6 +7,6 @@ public class Laptop(string name, string cpu, int ramGb) : Przedmioty(name)
 
     public override string ToString()
     {
-        return $"{base.ToString()}, Type: Laptop, CPU: {Cpu}, RAM: {RamGb} GB";
+        return $"{base.ToString()}, Typ: Laptop, CPU: {Cpu}, RAM: {RamGb} GB";
     }
 }

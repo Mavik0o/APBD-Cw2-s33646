@@ -13,6 +13,6 @@ public class Kamera : Przedmioty
 
     public override string ToString()
     {
-        return $"{base.ToString()}, Type: Camera, Resolution: {ResolutionMp} MP, DSLR: {IsDslr}";
+        return $"{base.ToString()}, Typ: Kamera, Rezolucja: {ResolutionMp} MP, DSLR: {IsDslr}";
     }
 }

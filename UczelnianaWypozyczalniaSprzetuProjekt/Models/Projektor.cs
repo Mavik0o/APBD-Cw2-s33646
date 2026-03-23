@@ -7,6 +7,6 @@ public class Projektor(string name, int brightnessLumens, bool hasHdmi) : Przedm
 
     public override string ToString()
     {
-        return $"{base.ToString()}, Type: Projector, Brightness: {BrightnessLumens} lm, HDMI: {HasHdmi}";
+        return $"{base.ToString()}, Typ: Projector, Jasność: {BrightnessLumens} lm, HDMI: {HasHdmi}";
     }
 }

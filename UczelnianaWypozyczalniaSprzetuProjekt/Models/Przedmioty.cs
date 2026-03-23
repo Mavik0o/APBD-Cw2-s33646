@@ -19,6 +19,6 @@ public abstract class Przedmioty
 
     public override string ToString()
     {
-        return $"ID: {Id}, Name: {Name}, Status: {Status}";
+        return $"ID: {Id}, imie: {Name}, Status: {Status}";
     }
 }
