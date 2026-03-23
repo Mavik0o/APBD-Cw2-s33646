@@ -1,12 +1,8 @@
 ﻿namespace UczelnianaWypozyczalniaSprzetuProjekt.Models;
 
-public class Employee : Uzytkownik
+public class Employee(string firstName, string lastName) : Uzytkownik(firstName, lastName)
 {
-    public Employee(string firstName, string lastName) : base(firstName, lastName)
-    {
-    }
-
     public override int GetLoanLimit() => 5;
 
-    public override string GetUserType() => "Employee";
+    protected override string GetUserType() => "Employee";
 }

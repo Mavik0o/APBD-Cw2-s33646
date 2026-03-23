@@ -1,15 +1,9 @@
 ﻿namespace UczelnianaWypozyczalniaSprzetuProjekt.Models;
 
-public class Laptop : Przedmioty
+public class Laptop(string name, string cpu, int ramGb) : Przedmioty(name)
 {
-    public string Cpu { get; set; }
-    public int RamGb { get; set; }
-
-    public Laptop(string name, string cpu, int ramGb) : base(name)
-    {
-        Cpu = cpu;
-        RamGb = ramGb;
-    }
+    private string Cpu { get; set; } = cpu;
+    private int RamGb { get; set; } = ramGb;
 
     public override string ToString()
     {

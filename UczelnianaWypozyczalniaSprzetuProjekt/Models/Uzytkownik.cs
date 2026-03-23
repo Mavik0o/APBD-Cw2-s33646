@@ -4,7 +4,7 @@ public abstract class Uzytkownik
 {
     private static int _nextId = 1;
 
-    public int Id { get; }
+    private int Id { get; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
@@ -16,7 +16,7 @@ public abstract class Uzytkownik
     }
 
     public abstract int GetLoanLimit();
-    public abstract string GetUserType();
+    protected abstract string GetUserType();
 
     public override string ToString()
     {

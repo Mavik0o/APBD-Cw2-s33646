@@ -6,9 +6,9 @@ public abstract class Przedmioty
 {
     private static int _nextId = 1;
 
-    public int Id { get; }
+    private int Id { get; }
     public string Name { get; set; }
-    public StatusPrzedmiotow Status { get; set; }
+    private StatusPrzedmiotow Status { get; set; }
 
     protected Przedmioty(string name)
     {

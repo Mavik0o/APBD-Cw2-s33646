@@ -2,10 +2,10 @@
 
 public class Kamera : Przedmioty
 {
-    public int ResolutionMp { get; set; }
-    public bool IsDslr { get; set; }
+    private int ResolutionMp { get; set; }
+    private bool IsDslr { get; set; }
 
-    public Kamera(string name, int resolutionMp, bool isDslr) : base(name)
+    private Kamera(string name, int resolutionMp, bool isDslr) : base(name)
     {
         ResolutionMp = resolutionMp;
         IsDslr = isDslr;
