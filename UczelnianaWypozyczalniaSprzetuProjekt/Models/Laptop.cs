@@ -2,8 +2,8 @@
 
 public class Laptop(string name, string cpu, int ramGb) : Przedmioty(name)
 {
-    private string Cpu { get; set; } = cpu;
-    private int RamGb { get; set; } = ramGb;
+    public string Cpu { get; set; } = cpu;
+    public int RamGb { get; set; } = ramGb;
 
     public override string ToString()
     {

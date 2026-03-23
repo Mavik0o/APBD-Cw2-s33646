@@ -4,15 +4,15 @@ public class Loan
 {
     private static int _nextId = 1;
 
-    private int Id { get; }
-    private Uzytkownik User { get; }
-    private Przedmioty Equipment { get; }
-    private DateTime BorrowDate { get; }
-    private DateTime DueDate { get; }
-    private DateTime? ReturnDate { get; set; }
-    private decimal Penalty { get; set; }
+    public int Id { get; }
+    public Uzytkownik User { get; }
+    public Przedmioty Equipment { get; }
+    public DateTime BorrowDate { get; }
+    public DateTime DueDate { get; }
+    public DateTime? ReturnDate { get; private set; }
+    public decimal Penalty { get; private set; }
 
-    private bool IsReturned => ReturnDate.HasValue;
+    public bool IsReturned => ReturnDate.HasValue;
     public bool IsActive => !IsReturned;
     public bool IsOverdue => !IsReturned && DateTime.Now.Date > DueDate.Date;
 

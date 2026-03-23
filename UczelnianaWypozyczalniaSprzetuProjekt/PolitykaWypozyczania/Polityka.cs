@@ -2,9 +2,9 @@
 
 namespace UczelnianaWypozyczalniaSprzetuProjekt.PolitykaWypozyczania;
 
-public static class LoanPolicy
+public static class Polityka
 {
-    private const decimal DailyPenaltyRate = 15m;
+    public const decimal DailyPenaltyRate = 15m;
 
     public static int GetLoanLimit(Uzytkownik uzytkownik)
     {
@@ -14,10 +14,8 @@ public static class LoanPolicy
     public static decimal CalculatePenalty(DateTime dueDate, DateTime returnDate)
     {
         var daysLate = (returnDate.Date - dueDate.Date).Days;
-
         if (daysLate <= 0)
             return 0;
-
         return daysLate * DailyPenaltyRate;
     }
 }

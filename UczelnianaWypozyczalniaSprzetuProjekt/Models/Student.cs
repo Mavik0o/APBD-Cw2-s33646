@@ -4,5 +4,5 @@ public class Student(string firstName, string lastName) : Uzytkownik(firstName, 
 {
     public override int GetLoanLimit() => 2;
 
-    protected override string GetUserType() => "Student";
+    public override string GetUserType() => "Student";
 }

@@ -2,8 +2,8 @@
 
 public class Projektor(string name, int brightnessLumens, bool hasHdmi) : Przedmioty(name)
 {
-    private int BrightnessLumens { get; set; } = brightnessLumens;
-    private bool HasHdmi { get; set; } = hasHdmi;
+    public int BrightnessLumens { get; set; } = brightnessLumens;
+    public bool HasHdmi { get; set; } = hasHdmi;
 
     public override string ToString()
     {
